@@ -4,7 +4,7 @@ defmodule Modbux.Tcp.Client do
   """
   alias Modbux.Tcp.Client
   alias Modbux.Tcp
-  use GenServer, restart: :permanent, shutdown: 500
+  use GenServer, restart: :transient, shutdown: 500
   require Logger
 
   @timeout 2000
